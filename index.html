@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./script.js"></script>
+    <script>
+        db.dbName = "testing";
+        db.storeName = "coop";
+        db.version = 1;
+        db.storeOptions = { keyPath: "id" };
+
+        var base
+        function assigner(param) {
+            base = param;
+        }
+        db.init(assigner)
+
+        db.add(base, { id: 12, name: "chris", age: 25 });
+
+    </script>
+</body>
+
+</html>
